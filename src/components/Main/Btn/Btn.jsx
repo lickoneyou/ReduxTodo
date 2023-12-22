@@ -15,9 +15,11 @@ const Btn = () => {
     }
 
     const todos = JSON.parse(localStorage.getItem("todos"));
-
-    todos.push({ value: textAreaValue, id: randomId(30, "aA0") });
-    localStorage.setItem("todos", JSON.stringify(todos));
+    
+    if (textAreaValue) {
+      todos.push({ value: textAreaValue, id: randomId(30, "aA0") });
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
   }
 
   return (
