@@ -1,8 +1,11 @@
 import React from "react";
 import Textarea from "@mui/joy/Textarea";
 import styles from "./TextArea.module.css";
+import { useDispatch } from "react-redux";
 
-const TextArea = () => {
+export const TextArea = () => {
+  const dispatch = useDispatch();
+
   return (
     <Textarea
       className={styles.textArea}
@@ -12,8 +15,9 @@ const TextArea = () => {
       size="lg"
       variant="outlined"
       placeholder="..."
+      onChange={function (e) {
+        dispatch({ type: "CHANGE", payload: e.target.value });
+      }}
     />
   );
 };
-
-export default TextArea;

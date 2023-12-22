@@ -1,7 +1,7 @@
 import React from "react";
-import TextArea from "./TextArea/TextArea";
+import { TextArea } from "./TextArea/TextArea";
+import styles from "./Main.module.css";
 import Btn from "./Btn/Btn";
-import styles from './Main.module.css'
 
 const Main = () => {
   return (
