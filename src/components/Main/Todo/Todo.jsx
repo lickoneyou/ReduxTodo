@@ -6,12 +6,13 @@ const Todo = ({ id, text }) => {
   return (
     <Card
       sx={{
-        maxWidth: 300,
+        minWidth: 200,
         display: "flex",
         justifyContent: "space-around",
         flexDirection: "column",
         alignItems: "center",
-        minHeight: 200
+        minHeight: 200,
+        margin: '20px'
       }}
     >
       <CardContent>
