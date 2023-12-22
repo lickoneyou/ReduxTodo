@@ -1,4 +1,7 @@
-export const reducer = (state = {}, action) => {
+export const reducer = (
+  state = JSON.parse(localStorage.getItem("todos")),
+  action
+) => {
   switch (action.type) {
     case "UPDATE":
       state = JSON.parse(localStorage.getItem("todos"));

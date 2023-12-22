@@ -1,11 +1,16 @@
 import React from "react";
 import Todo from "../Todo/Todo";
 import styles from "./TodoList.module.css";
+import { useSelector } from "react-redux";
 
 const TodoList = () => {
+  const todos = useSelector((state) => state.todo);
+
   return (
     <div className={styles.todoList}>
-      <Todo text={"123123123"} id="123" />
+      {todos.map((todo) => (
+        <Todo text={todo.value} id={todo.id} key={todo.id} />
+      ))}
     </div>
   );
 };

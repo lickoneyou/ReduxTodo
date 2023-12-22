@@ -29,6 +29,7 @@ const Btn = () => {
           console.log(textAreaValue);
           createTodos();
           dispatch({ type: "CLEAR" });
+          dispatch({ type: "UPDATE" });
         }}
       >
         ADD
