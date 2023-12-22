@@ -17,7 +17,7 @@ const Todo = ({ id, text }) => {
   return (
     <Card
       sx={{
-        minWidth: 200,
+        width: 200,
         display: "flex",
         justifyContent: "space-around",
         flexDirection: "column",
@@ -27,7 +27,9 @@ const Todo = ({ id, text }) => {
       }}
     >
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{
+        padding: '0 5px 0 5px'
+      }}>
           {text}
         </Typography>
       </CardContent>
