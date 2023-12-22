@@ -8,9 +8,11 @@ const TodoList = () => {
 
   return (
     <div className={styles.todoList}>
-      {todos.map((todo) => (
-        <Todo text={todo.value} id={todo.id} key={todo.id} />
-      ))}
+      {todos.length
+        ? todos.map((todo) => (
+            <Todo text={todo.value} id={todo.id} key={todo.id} />
+          ))
+        : false}
     </div>
   );
 };

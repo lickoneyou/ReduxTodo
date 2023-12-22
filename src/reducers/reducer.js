@@ -2,6 +2,9 @@ export const reducer = (
   state = JSON.parse(localStorage.getItem("todos")),
   action
 ) => {
+  if (!localStorage.getItem("todos")) {
+    localStorage.setItem("todos", JSON.stringify([]));
+  }
   switch (action.type) {
     case "UPDATE":
       state = JSON.parse(localStorage.getItem("todos"));
