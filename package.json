@@ -19,6 +19,7 @@
     "react-redux": "^8.1.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
+    "start-server-and-test": "^2.0.3",
     "styled-components": "^6.1.2",
     "web-vitals": "^2.1.4"
   },
@@ -26,6 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cypress:open": "cypress open",
+    "cypress": "start-server-and-test start http://localhost:3000 cypress:open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
