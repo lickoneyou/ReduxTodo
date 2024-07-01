@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "cypress:open": "cypress open",
     "cypress": "start-server-and-test start http://localhost:3000 cypress:open",
     "eject": "react-scripts eject"
